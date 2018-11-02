@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Display</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="code-holder">
+                <h1 class="section-title">Game Object</h1>
+                <pre><code id="game-object">Click New Game to begin.  </code></pre>
+            </div>
+            <div class="game-holder">
+                <h1 class="section-title">Uno</h1>
+    
+                <div class="table">
+                    <img id="deck" class="table-card" src="images/uno_back.png" />
+                    <!--<img id="card2" class="table-card" src="images/uno_back.png" />-->
+                    <!--<img id="card3" class="table-card" src="images/uno_back.png" />-->
+                    <!--<img id="card4" class="table-card" src="images/uno_back.png" />-->
+                    <!--<img id="card5" class="table-card" src="images/uno_back.png" />-->
+                </div>
+                
+                <div class="table-deck">
+
+                </div>
+    
+                <div class="game-buttons">
+                    <button onclick={startNewGame()} class="game-button">New Game</button>
+                    <button onclick={changePlayerTurn()} class="game-button">End Turn</button>
+                </div>
+                <br />
+                <hr />
+                <div class="round-info">
+                    <h1>Round: <span id="round">No Game Yet</span></h1>
+                    <h3>Point totals:</h3>
+                    <ol id="players-in">
+                          
+                    </ol>
+                    <h3>Cards left in the deck: <span id="num-cards"></span></h3>
+                    <h3>Who's turn is it: <span id="turn"></span>'s turn</h3>
+                </div> 
+                <br />
+                <hr />
+                <h2>Players</h2>
+                <div class="players">
+                    <div class="player">
+                        <h3  id="playerA_name"  class="player-name">Player 1</h3>
+                        <img id="playerA_card1" class="player-card" src="images/uno_back.png" />
+                        <div class="player-info">
+                            
+                        </div>
+                        <div class="player-bet">
+                            <button onclick={drawCard(Game.players.A)}   class="game-button">Draw A Card</button>                                
+                        </div>                        
+                    </div>
+                    <div class="player">
+                        <h3  id="playerB_name"  class="player-name">Player 2</h3>
+                        <img id="playerB_card1" class="player-card" src="images/uno_back.png" />
+                        <div class="player-bet">
+                            <button onclick={drawCard(Game.players.B)}   class="game-button">Draw A Card</button>                                
+                        </div>                        
+                    </div>
+                    <div class="player">
+                        <h3  id="playerC_name"  class="player-name">Player 3</h3>
+                        <img id="playerC_card1" class="player-card" src="images/uno_back.png" />
+                        <div class="player-bet">
+                            <button onclick={drawCard(Game.players.C)}   class="game-button">Draw A Card</button>                                
+                        </div>                        
+                    </div>
+                    <div class="player">
+                        <h3  id="playerD_name"  class="player-name">Player 4</h3>
+                        <img id="playerD_card1" class="player-card" src="images/uno_back.png" />
+                        <div class="player-bet">
+                            <button onclick={drawCard(Game.players.D)}   class="game-button">Draw A Card</button>                                
+                        </div>                        
+                    </div>  
+                </div>        
+            </div>
+        </div>
+        <script src="game.js"></script>
+    </body>
