@@ -202,12 +202,7 @@ function playWildCard(cardName){
     if ( val == 'draw_four' ){
         Game.topCardValue = 'draw_four'
         Game.topCard = 'wild_draw_four'
-        changePlayerTurn()
-        playerDrawCard()
-        playerDrawCard()
-        playerDrawCard()
-        playerDrawCard()
-        showGameObject()
+        playerDrawFour()
     }
     if ( val == null ){
         changePlayerTurn()
